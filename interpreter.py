@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 import err
 class interpreter(object):
   def __init__(self, codeSource):
@@ -7,7 +8,6 @@ class interpreter(object):
     self.codeFile.close()
     self.tempCode = self.tempCode.split('\n')
     self.code = []
-  
 
   def mov(self, l, d):
     print l
@@ -31,7 +31,6 @@ class interpreter(object):
       ##############
       #CODE LOADING#
       ##############
-  
 
     #Transforms into array of arrays from just an array
     for i in range(0, len(self.tempCode)):
@@ -58,7 +57,7 @@ class interpreter(object):
         diff = codeWidth - len(self.code[i])
         for s in range(0, diff):
           self.code[i].extend(" ")
-  
+
     """
     for i in self.code:
       print str(i)[1:-1]
@@ -88,7 +87,7 @@ class interpreter(object):
       #Font
     regu = '\033[0m'
     bold = '\033[0;37;42m'
-  
+
     print """###########\n#EXECUTING#\n###########"""
     while True:
       #Printing code
@@ -106,10 +105,10 @@ class interpreter(object):
       print "\n",
       print "─"*(codeWidth*2),
       print  "\n"
-  
+
       loc = self.mov(loc, dir)
-      print loc
-  
+      print type(loc)
+
       block = self.code[loc[1]][loc[0]]
     #Interpretation
       if (dir == 1) and (block == "("):

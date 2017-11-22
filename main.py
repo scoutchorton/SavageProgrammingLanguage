@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 import err
 from interpreter import interpreter
 print "#"*32 + "\n#SAVAGE PROGRAMMING INTERPRETER#\n" + "#"*32
