@@ -116,8 +116,8 @@ class interpreter(object):
 			elif block == "<":
 				dir = 3
 			elif block == " ":
-				err.errRet(01.0)
+				err.errRet(01.1)
 				break
-			sleep(0.1)
+			sleep(0.05)
 
 		print """##########\n#FINISHED#\n##########"""
